@@ -1,5 +1,5 @@
 from werkzeug.wrappers import Request, Response, ResponseStream
-class middleware():
+class basicauthmiddleware():
 
     def __init__(self, app):
         self.app = app
