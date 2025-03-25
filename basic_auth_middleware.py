@@ -4,7 +4,7 @@ class basicauthmiddleware():
     def __init__(self, app):
         self.app = app
         self.userName = 'Naman'
-        self.password = 'Heheheheh'
+        self.password = 'Open'
 
     def __call__(self, environ, start_response):
         request = Request(environ)
