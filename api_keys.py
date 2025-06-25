@@ -1,8 +1,12 @@
 from werkzeug.wrappers import Request, Response
 from flask import Flask, request, jsonify
+import configure_logging
+import logging
+import os 
+from dotenv import load_dotenv
 
 # Hardcoded API Key for demonstration
-VALID_API_KEY = "Ncky@0719"
+VALID_API_KEY = os.getenv("Key")
 
 class Middleware:
     def __init__(self, app):
