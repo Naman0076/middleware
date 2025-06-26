@@ -20,8 +20,9 @@ class Middleware:
         # Validate API Key
         if not api_key or api_key != VALID_API_KEY:
             res = Response("Unauthorized: Invalid or missing API key", mimetype='text/plain', status=401)
+            logging.error("Unaurthorized : invalid or missing key , check the key or input")
             return res(environ, start_response)
-        logging.error("Unaurthorized : invalid or missing key , check the key or input")
+       
 
         # Store user info in request environment
         environ["user"] = {"name": "Authorized User"}
